@@ -6,6 +6,24 @@ html
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
-script(src='/javascripts/jquery-1.11.2.min.js')
-script(src='/vendor/bootstrap.min.js')
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Home
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/home/') Home
+      .container
+        block content
+
+        footer
+          .row
+            .col-xs-12
+              small &copy; CIS.395
+      script(src='/javascripts/jquery-1.11.2.min.js')
+      script(src='/vendor/bootstrap.min.js')
